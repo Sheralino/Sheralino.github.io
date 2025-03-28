@@ -55,6 +55,11 @@ header {
   color: #e0e0e0;
   padding: 80px 0;
   text-align: center;
+  position: relative;
+  background-image: url('https://example.com/path-to-skeleton-image.png'); /* Add a background skeleton image */
+  background-size: 200px;
+  background-position: top right;
+  background-repeat: no-repeat;
 }
 
 header h1 {
@@ -76,6 +81,7 @@ header p {
 #about {
   padding: 60px 0;
   background-color: #1c1c1c; /* Dark background */
+  position: relative;
 }
 
 #about h2 {
@@ -175,6 +181,7 @@ header p {
   border-radius: 8px;
   margin-bottom: 20px;
   text-align: center;
+  position: relative;
 }
 
 .motion-graphic img {
@@ -195,6 +202,15 @@ header p {
   color: #ccc;
   font-size: 1rem;
   margin-top: 10px;
+}
+
+/* Skeleton Illustration as Background */
+#motion-graphics .motion-graphic {
+  background-image: url('https://example.com/path-to-skeleton-graphic.svg'); /* Add a transparent skeleton SVG here */
+  background-size: 150px;
+  background-position: center right;
+  background-repeat: no-repeat;
+  padding-right: 120px; /* Make space for the skeleton */
 }
 
 /* Footer */
