@@ -1,56 +1,184 @@
-/* Reset some default styles */
-body, h1, h2, p, ul {
+/* Reset default browser styles */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* Set the font and background */
+/* Set up the body and font styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  padding: 20px;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text color for contrast */
 }
 
-/* Header styles */
-header {
-  background-color: #4CAF50;
+/* Global container */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #333; /* Dark background for nav */
   color: white;
+  padding: 1rem 0;
   text-align: center;
-  padding: 20px 0;
 }
 
-h1 {
-  margin: 0;
-}
-
-/* About Me and Projects sections */
-section {
-  margin-bottom: 30px;
-}
-
-h2 {
-  color: #4CAF50;
-}
-
-ul {
+nav ul {
   list-style-type: none;
 }
 
-ul li {
-  margin: 10px 0;
+nav ul li {
+  display: inline;
+  margin: 0 20px;
 }
 
-/* Footer styles */
-footer {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #333;
+nav ul li a {
   color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #4CAF50; /* Accent color on hover */
+}
+
+/* Header section */
+header {
+  background-color: #1a1a1a; /* Darker background for the header */
+  color: #e0e0e0; /* Light text */
+  padding: 80px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #fff; /* White title */
+}
+
+header p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #bbb; /* Light gray text */
+}
+
+/* About Me section */
+#about {
+  padding: 60px 0;
+  background-color: #1c1c1c; /* Dark background */
+}
+
+#about h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #e0e0e0; /* Light text color */
+}
+
+#about p {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ccc; /* Light gray text */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Projects section */
+#projects {
+  padding: 60px 0;
+  background-color: #121212; /* Dark background */
+}
+
+#projects h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #e0e0e0; /* Light text */
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project {
+  background-color: #333; /* Dark card background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Dark shadow */
+  margin: 20px;
+  padding: 20px;
+  width: 45%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.project h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 10px;
+  color: #fff; /* White title */
+}
+
+.project p {
+  font-size: 1.1rem;
+  color: #ccc; /* Light text */
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #333; /* Dark background */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1rem;
+  color: #bbb; /* Light gray text */
 }
 
 footer a {
-  color: #4CAF50;
+  color: #4CAF50; /* Accent color */
   text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .project {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
